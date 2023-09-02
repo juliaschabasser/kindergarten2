@@ -5,14 +5,12 @@
         <th>Adresse</th>
         <th>Alter</th>
         <th>Geburtsdatum</th>
-        <th>Kindergartengruppe</th>
       </tr>
     <tr *ngFor="let child of children">
         <td>{{child.name}}</td>
         <td>{{child.kindergarten.name}}</td>
         <td>{{child.kindergarten.address}}</td>
-        <td>{{child.age}}</td>
+        <td>{{getAge(child.birthDate)}}</td>
         <td>{{child.birthDate | date:'longDate'}}</td>
-        <td>{{child.kindergartengruppe}}</td>
     </tr>
 </table>
